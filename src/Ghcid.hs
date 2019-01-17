@@ -97,7 +97,7 @@ options = cmdArgsMode $ Options
     ,restart = [] &= typ "PATH" &= help "Restart the command when the given file or directory contents change (defaults to .ghci and any .cabal file, unless when using stack or a custom command)"
     ,reload = [] &= typ "PATH" &= help "Reload when the given file or directory contents change (defaults to none)"
     ,directory = "." &= typDir &= name "C" &= help "Set the current directory"
-    ,outputfile = [] &= typFile &= name "o" &= help "File to write the full output to"
+    ,outputfile = ["quickfix"] &= typFile &= name "o" &= help "File to write the full output to"
     ,ignoreLoaded = False &= explicit &= name "ignore-loaded" &= help "Keep going if no files are loaded. Requires --reload to be set."
     ,poll = Nothing &= typ "SECONDS" &= opt "0.1" &= explicit &= name "poll" &= help "Use polling every N seconds (defaults to using notifiers)"
     ,max_messages = Nothing &= name "n" &= help "Maximum number of messages to print"

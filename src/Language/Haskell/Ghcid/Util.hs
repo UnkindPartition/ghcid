@@ -47,7 +47,8 @@ ghciFlagsRequiredVersioned =
 -- | Flags that make ghcid work better and are supported on all GHC versions
 ghciFlagsUseful :: [String]
 ghciFlagsUseful =
-    ["-ferror-spans" -- see #148
+    ["-fno-error-spans"
+    ,"-fno-diagnostics-show-caret"
     ,"-j" -- see #153, GHC 7.8 and above, but that's all I support anyway
     ]
 
